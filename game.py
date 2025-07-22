@@ -11,6 +11,15 @@ def get_player_guess():
     5. Add error handling for invalid input (e.g., text instead of a number).
     """
     # Student 1: Add your code here
+        while True:
+        try:
+            guess = int(input("Enter your guess (1-100): "))
+            if 1 <= guess <= 100:
+                return guess
+            else:
+                print("Please enter a number within the range 1 to 100.")
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
     pass
 
 def check_guess(secret_number, player_guess):
